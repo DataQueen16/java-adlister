@@ -20,6 +20,8 @@ public class ServletCount extends HttpServlet {
         PrintWriter out = response.getWriter();
         String title = "Total Number of Hits";
 
+
+
         out.println(
                 "<html>\n" +
                     "<head><title>" + title + "</title></head>\n" +
