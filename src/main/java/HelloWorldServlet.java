@@ -9,7 +9,9 @@ import java.io.PrintWriter;
 @WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws IOException {
+
         response.setContentType("text/html");
+
         PrintWriter out = response.getWriter();
         out.println("<h1>Hello, World!</h1>");
     }
