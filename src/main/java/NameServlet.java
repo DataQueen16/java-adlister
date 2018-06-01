@@ -13,7 +13,7 @@ public class NameServlet extends HttpServlet{
         request.setAttribute("name", "name");
         request.getRequestDispatcher("/nameResult.jsp").forward(request, response);
 
-        if (name != null) {
+//        if (name) {
 
         }
     }
