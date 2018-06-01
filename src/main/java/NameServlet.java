@@ -8,7 +8,13 @@ import java.io.IOException;
 @WebServlet(name = "NameServlet", urlPatterns = "/name")
 public class NameServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String name = request.getParameter("name");
+
         request.setAttribute("name", "name");
         request.getRequestDispatcher("/nameResult.jsp").forward(request, response);
+
+        if (name != null) {
+
+        }
     }
 }
