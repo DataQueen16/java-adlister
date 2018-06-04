@@ -14,7 +14,7 @@
     </jsp:include>
 </head>
 <body>
-    <h1>Hello there, ${name}!</h1>
+    <h1>Show all the ads</h1>
     <c:forEach var="post" items="${posts}">
         <h1>${post.title}</h1>
         <p>${post.body}</p>
