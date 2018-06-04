@@ -5,9 +5,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name="LoginServlet", urlPatterns = "/Login")
-public class LoginServlet extends HTTPServlet {
+public class LoginServlet extends HttpServlet {
     protected void doGet(
 
-    );
+    ) {
+
+    }
 
 }
