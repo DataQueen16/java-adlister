@@ -15,9 +15,9 @@
 </head>
 <body>
     <h1>Show all the ads</h1>
-    <c:forEach var="post" items="${posts}">
-        <h1>${post.title}</h1>
-        <p>${post.body}</p>
+    <c:forEach var="ad" items="${ads}">
+        <h1>${ad.title}</h1>
+        <p>${ad.description}</p>
     </c:forEach>
 </body>
 </html>
