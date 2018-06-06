@@ -8,16 +8,16 @@ public class MySQLAdsDao implements Ads {
 
     private Connection connection;
     Config config;
+//    Connection connection;
 
 
-    public MySQLAdsDao(Config config) throws SQLException {
+    public MySQLAdsDao() throws SQLException {
         String url = config.getUrl();
         String user = config.getUser();
         String password = config.getPassword();
 
         DriverManager.registerDriver(new Driver());
-        Connection connection = DriverManager.getConnection(url, user, password);
-        this.config = config;
+        this.connection = DriverManager.getConnection(url, user, password);
     }
 
     @Override
@@ -50,8 +50,9 @@ public class MySQLAdsDao implements Ads {
         Statement stmt = connection.createStatement();
         stmt.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
         ResultSet rs = stmt.getGeneratedKeys();
-        if (rs.next(){
+        if (rs.next()){
             System.out.println("Inserted a new record! New id: " + rs.getLong(1));
         }
+        return rs.getLong(1);
     }
 }
