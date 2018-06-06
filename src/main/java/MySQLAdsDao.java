@@ -1,7 +1,4 @@
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +10,12 @@ public class MySQLAdsDao implements Ads {
 
     public MySQLAdsDao(Config config) throws SQLException {
         this.config = config;
+        String url = config.getUrl();
+        String user = config.getUser();
+        String password = config.getPassword();
+
+        DriverManager.registerDriver(new Driver());
+        Connection connection = DriverManager.getConnection(url, user, password);
     }
 
     @Override
@@ -40,7 +43,8 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Long insert(Ad ad) {
+    public Long insert(Ad ad) throws SQLException {
+        Statement stmt = connection.createStatement();
         return null;
     }
 }
