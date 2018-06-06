@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
@@ -17,13 +18,14 @@ public class MySQLAdsDao implements Ads {
     @Override
     public List<Ad> all() throws SQLException {
         Statement stmt = connection.createStatement();
+        List<Ad> allAds = new ArrayList<>();
 
         long id;
         long userId;
         String title;
         String description;
 
-            ResultSet rs = stmt.executeQuery("SELECT * FROM ads;"));
+            ResultSet rs = stmt.executeQuery("SELECT * FROM ads;");
             while(rs.next()) {
                 id = rs.getLong("id");
                 userId = rs.getLong("user_id");
@@ -31,10 +33,10 @@ public class MySQLAdsDao implements Ads {
                 description = rs.getString("description");
 
                 Ad ad = new Ad(id, userId, title, description);
-                ad.add(ad);
+                allAds.add(ad);
             }
 
-        return null;
+        return allAds;
     }
 
     @Override
