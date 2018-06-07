@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src/main/java/com/codeup/adlister/dao/DaoFactory.java
+import com.codeup.adlister.dao.Config;<<<<<<< HEAD:src/main/java/com/codeup/adlister/dao/DaoFactory.java
 package com.codeup.adlister.dao;
 
 public class DaoFactory {

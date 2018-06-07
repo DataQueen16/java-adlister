@@ -1,11 +1,8 @@
-<<<<<<< HEAD:src/main/java/com/codeup/adlister/dao/Ads.java
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
-
-=======
 import java.sql.SQLException;
->>>>>>> jdbc-exercise:src/main/java/Ads.java
+
 import java.util.List;
 
 public interface Ads {
