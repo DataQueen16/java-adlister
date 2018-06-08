@@ -21,7 +21,11 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
+        int numberOfRounds = 12;
+//        String hash = BCrypt.hashpw(password, BCrypt.gensalt(numberOfRounds));
         // TODO: find a record in your database that matches the submitted password
+        String hash = password;
+//        boolean passwordsDoMatch = BCrypt.checkpw(password, hash);
         // TODO: make sure we find a user with that username
         // TODO: check the submitted password against what you have in your database
         boolean validAttempt = false;

@@ -1,10 +1,9 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.User;
-
-import java.util.List;
+import com.mysql.cj.api.mysqla.result.Resultset;
 
 public interface Users {
-    User findByUsername(String username);
+    Resultset findByUsername(String username);
     Long insert(User user);
 }
